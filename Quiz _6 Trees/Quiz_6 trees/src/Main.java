@@ -14,6 +14,12 @@ public class Main {
         tree.insert(32);
 
         tree.traverseInOrderDescending();
-        tree.inOrderTraverse();
+        //tree.inOrderTraverse();
+
+        int searchValue = 27;
+       System.out.println("\n Node " + searchValue + " = "+ tree.get(searchValue));
+       System.out.println("\n Node with the greatest value : " +  tree.getMax());
+        System.out.println("\n Node with the least value : " +  tree.getMin());
+
     }
 }

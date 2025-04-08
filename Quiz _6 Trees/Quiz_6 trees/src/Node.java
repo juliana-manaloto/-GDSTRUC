@@ -57,6 +57,26 @@ public class Node {
         }
     }
 
+    public Node get(int value){
+        if(value == data){
+            return this;
+        }
+
+        if(value > data){
+            if(rightChild != null){
+                return rightChild.get(value);
+            }
+            else {
+                if(leftChild != null) {
+                   return leftChild.get(value);
+
+            }
+            }
+        }
+        return null;
+    }
+
+
     public int getData() {
         return data;
     }
@@ -79,5 +99,14 @@ public class Node {
 
     public void setRightChild(Node rightChild) {
         this.rightChild = rightChild;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", leftChild=" + leftChild +
+                ", rightChild=" + rightChild +
+                '}';
     }
 }
