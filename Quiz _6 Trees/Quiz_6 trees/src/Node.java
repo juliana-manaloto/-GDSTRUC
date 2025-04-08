@@ -14,7 +14,7 @@ public class Node {
             return;
         }
 
-       if(data > value){
+       if(value > data){
            if(rightChild == null) {
                rightChild = new Node(value);
            }
@@ -33,15 +33,17 @@ public class Node {
        }
             }
      public void traverseInOrderDescending(){
-        if(leftChild != null){
-            leftChild.traverseInOrderDescending();
-        }
+
+         if(rightChild != null){
+             rightChild.traverseInOrderDescending();
+         }
 
         System.out.println(("Node: " + data));
 
-        if(rightChild != null){
-            rightChild.traverseInOrderDescending();
-        }
+         if(leftChild != null){
+             leftChild.traverseInOrderDescending();
+         }
+
      }
     public void inOrderTraverse(){
         if(leftChild != null){
