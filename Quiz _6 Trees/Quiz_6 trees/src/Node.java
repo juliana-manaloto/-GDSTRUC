@@ -32,6 +32,28 @@ public class Node {
            }
        }
             }
+     public void traverseInOrderDescending(){
+        if(leftChild != null){
+            leftChild.traverseInOrderDescending();
+        }
+
+        System.out.println(("Node: " + data));
+
+        if(rightChild != null){
+            rightChild.traverseInOrderDescending();
+        }
+     }
+    public void inOrderTraverse(){
+        if(leftChild != null){
+            leftChild.inOrderTraverse();
+        }
+
+        System.out.println(("Node: " + data));
+
+        if(rightChild != null){
+            rightChild.inOrderTraverse();
+        }
+    }
 
     public int getData() {
         return data;

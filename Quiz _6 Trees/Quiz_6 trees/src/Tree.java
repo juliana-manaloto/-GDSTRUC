@@ -9,4 +9,21 @@ public class Tree {
 
         root.insert(value);
     }
+
+    public void traverseInOrderDescending(){
+        if(root == null){
+            System.out.println("Tree is empty :(");
+            return;
+        }
+        root.traverseInOrderDescending();
+
+    }
+    public void inOrderTraverse(){
+        if(root == null){
+            System.out.println("Tree is empty :(");
+            return;
+        }
+        root.inOrderTraverse();
+
+    }
 }
